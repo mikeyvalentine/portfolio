@@ -3,6 +3,8 @@
     src: url("./auth.otf");
     font-family: auth;
 }
+$lime: #00ff08;
+$blue: rgb(65, 105, 225);
 @mixin auth{
     font-family: 'auth';
     text-decoration: none;
@@ -18,74 +20,121 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    align-content: center;
 }
 @mixin blackshadow{
-    text-shadow: 1px 1px 10px #000;
+    text-shadow: 1px 1px 3px #000;
 }
-$lime: #00ff08;
-body{
-    background-color: $lime;
+@mixin menuitem{
+    width: 40vw;
+    height: 40vw;
+    max-height: 500px;
+    max-width: 500px;
+    min-width: 500px;
+    min-height: 500px;
 }
-#logodiv{
-    @include full;
-    height: auto;
-}
-#logo{
-    font-size: 10vw;
-    @include auth;
-    @include blackshadow;
+@mixin trans{
     transition: all .1s;
 }
-#logo:hover{
-    font-size: 10.5vw;
-    color: $lime;
-    text-shadow: 1px 1px 20px #000;
+@mixin align{
+    width: 90vw;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
-#navbar{
-    border-radius: 50px;
+@mixin btn{
+    box-shadow: 0px 0px 10px $blue, 
+        inset 0px 0px 10px $blue;
+    background-color: rgb(200, 214, 255);
+    border-radius: 40px;
+}
+@mixin bthhov{
+    box-shadow: 0px 0px 10px $blue, 
+        inset 0px 0px 10px $blue, 0px 0px 20px $lime;
+    transform: scaleY(.8);
+}
+body{
+    background-color: whitesmoke;
+}
+#logodiv{
     z-index: 100;
-    width: 20vw;
-    height: 30vw;
-    background-color: blue;
     position: fixed;
-    top: 0;
+    @include align;
+    height: auto;
+    @include flex;
+    justify-content: space-between;
+    top: 50px;
+}
+#logo{
+    @include btn;
+    font-size: 3vw;
     @include auth;
     @include blackshadow;
-    h1{
-        margin-top: none;
-        font-size: 5vw;
-    }
-    h1:hover{
-        cursor: pointer;
-    }
+    @include trans;
+    padding: 15px 30px 15px 30px;
+
 }
-#navmenu{
-    text-align: center;
+#logo:hover{
+    font-size: 3.1vw;
+    color: $lime;
+    text-shadow: 1px 1px 10px $lime;
+    @include bthhov();
+}
+#navbar{
+    width: 40%;
+    @include flex;
+    justify-content: space-between;
 }
 .navitem{
+    padding: 15px;
+    @include btn;
+    @include blackshadow();
     @include auth;
-    font-size: 5vw;
-    
+    @include trans;
+    font-size: 3vw;
+
 }
 .navitem:hover{
+    font-size: 3.1vw;
     color: $lime;
+    text-shadow: 1px 1px 10px $lime;
+    @include bthhov();
+}
+#header{
+    height: 10vw;
+    @include align;
+}
+#about{
+    @include align;
+    margin-bottom: 1.7vw;
+}
+#text{
+    padding: 30px;
+    h1{
+        @include auth;
+        font-size: 2.1vw;
+    }
 }
 #menu{
-    @include full;
+    @include align;
     @include flex;
 }
 .menuitem{
+    @include flex;
+    @include menuitem();
+    justify-content: left;
+    box-shadow: 0px 0px 20px $blue; 
     transition: all .2s;
-    width: 40vw;
+    margin-bottom: 50px;
     img{
         width: 100%;
     }
     a{
-        width: 40vw;
-        height: 40vw;
-        line-height: 40vw;
+        @include menuitem();
+        @include flex;
         @include auth;
-        font-size: 3vw;
+        font-size: 4vw;
+        vertical-align: middle;
         text-shadow: 1px 1px 10px grey, 1px 1px 10px #fff;
         color: #fff;
         position: absolute;
@@ -93,7 +142,17 @@ body{
         transition: all .2s;
     }
     a:hover{
-        background-color: rgba(1, 1, 1, 0.5);
-        box-shadow: 0px 0px 50px $lime, inset 1px 1px 50px $lime;
+        background-color: rgba(72, 151, 255, 0.4);
+        box-shadow: 0px 0px 50px white, inset 1px 1px 50px white;
     }
+}
+#footer{
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 0;
+    @include auth;
+    font-size: 1.3vw;
+    color: rgb(197, 206, 255);
 }

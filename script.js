@@ -1,4 +1,4 @@
-const names = ['Perfume Heart Animation', 'Flower Composition', 'Animated Logo for Calm Brand', 'Sept 2021 Animation'];
+const names = ['I dunno', 'Graphic Design', 'Motion Graphics', '3D Animation'];
 const srcs = ['./images/1.png','./images/2.jpg','./images/3.png','./images/4.png'];
 const refs = ['shirt.html', 'shirt.html', 'shirt.html', 'shirt.html'];
 class Item {
