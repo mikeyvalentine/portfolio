@@ -1,0 +1,99 @@
+
+@font-face {
+    src: url("./auth.otf");
+    font-family: auth;
+}
+@mixin auth{
+    font-family: 'auth';
+    text-decoration: none;
+    color: #000;
+}
+@mixin full{
+    width: 100%;
+    text-align: center;
+}
+@mixin flex{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+@mixin blackshadow{
+    text-shadow: 1px 1px 10px #000;
+}
+$lime: #00ff08;
+body{
+    background-color: $lime;
+}
+#logodiv{
+    @include full;
+    height: auto;
+}
+#logo{
+    font-size: 10vw;
+    @include auth;
+    @include blackshadow;
+    transition: all .1s;
+}
+#logo:hover{
+    font-size: 10.5vw;
+    color: $lime;
+    text-shadow: 1px 1px 20px #000;
+}
+#navbar{
+    border-radius: 50px;
+    z-index: 100;
+    width: 20vw;
+    height: 30vw;
+    background-color: blue;
+    position: fixed;
+    top: 0;
+    @include auth;
+    @include blackshadow;
+    h1{
+        margin-top: none;
+        font-size: 5vw;
+    }
+    h1:hover{
+        cursor: pointer;
+    }
+}
+#navmenu{
+    text-align: center;
+}
+.navitem{
+    @include auth;
+    font-size: 5vw;
+    
+}
+.navitem:hover{
+    color: $lime;
+}
+#menu{
+    @include full;
+    @include flex;
+}
+.menuitem{
+    transition: all .2s;
+    width: 40vw;
+    img{
+        width: 100%;
+    }
+    a{
+        width: 40vw;
+        height: 40vw;
+        line-height: 40vw;
+        @include auth;
+        font-size: 3vw;
+        text-shadow: 1px 1px 10px grey, 1px 1px 10px #fff;
+        color: #fff;
+        position: absolute;
+        visibility: hidden;
+        transition: all .2s;
+    }
+    a:hover{
+        background-color: rgba(1, 1, 1, 0.5);
+        box-shadow: 0px 0px 50px $lime, inset 1px 1px 50px $lime;
+    }
+}

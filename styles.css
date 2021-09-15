@@ -1,0 +1,120 @@
+@font-face {
+  src: url("./auth.otf");
+  font-family: auth;
+}
+
+body {
+  background-color: #00ff08;
+}
+
+#logodiv {
+  width: 100%;
+  text-align: center;
+  height: auto;
+}
+
+#logo {
+  font-size: 10vw;
+  font-family: 'auth';
+  text-decoration: none;
+  color: #000;
+  text-shadow: 1px 1px 10px #000;
+  -webkit-transition: all .1s;
+  transition: all .1s;
+}
+
+#logo:hover {
+  font-size: 10.5vw;
+  color: #00ff08;
+  text-shadow: 1px 1px 20px #000;
+}
+
+#navbar {
+  border-radius: 50px;
+  z-index: 100;
+  width: 20vw;
+  height: 30vw;
+  background-color: blue;
+  position: fixed;
+  top: 0;
+  font-family: 'auth';
+  text-decoration: none;
+  color: #000;
+  text-shadow: 1px 1px 10px #000;
+}
+
+#navbar h1 {
+  margin-top: none;
+  font-size: 5vw;
+}
+
+#navbar h1:hover {
+  cursor: pointer;
+}
+
+#navmenu {
+  text-align: center;
+}
+
+.navitem {
+  font-family: 'auth';
+  text-decoration: none;
+  color: #000;
+  font-size: 5vw;
+}
+
+.navitem:hover {
+  color: #00ff08;
+}
+
+#menu {
+  width: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.menuitem {
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  width: 40vw;
+}
+
+.menuitem img {
+  width: 100%;
+}
+
+.menuitem a {
+  width: 40vw;
+  height: 40vw;
+  line-height: 40vw;
+  font-family: 'auth';
+  text-decoration: none;
+  color: #000;
+  font-size: 3vw;
+  text-shadow: 1px 1px 10px grey, 1px 1px 10px #fff;
+  color: #fff;
+  position: absolute;
+  visibility: hidden;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.menuitem a:hover {
+  background-color: rgba(1, 1, 1, 0.5);
+  -webkit-box-shadow: 0px 0px 50px #00ff08, inset 1px 1px 50px #00ff08;
+          box-shadow: 0px 0px 50px #00ff08, inset 1px 1px 50px #00ff08;
+}
+/*# sourceMappingURL=styles.css.map */
